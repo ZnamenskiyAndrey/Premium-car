@@ -1,0 +1,81 @@
+.header {
+  background-color: var(--black);
+  padding: 36px 0;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__list{
+    display: flex;
+    margin-left: -84px;
+  }
+  &__item:not(:last-child){
+    margin-right: 35px;
+  }
+  &__link{
+    color: var(--white);
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: var(--category);
+    }
+  }
+}
+.header-search {
+
+  &__button {
+
+  }
+  &__svg path{
+    transition: fill 0.3s ease;
+  }
+  &__svg:hover {
+    path {
+      fill: var(--category);
+    }
+  }
+}
+.button {
+}
+.btn-reset {
+}
+
+.burger {
+  width: 40px;
+  height: 26px;
+  border: solid 2px solid var(--white);
+  position: relative;
+
+  &__line {
+    width: 36px;
+    background-color: var(--white);
+    height: 3px;
+    display: block;
+    &::after,
+    &::before {
+      content: "";
+      width: 36px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: var(--white);
+      position: absolute;
+    }
+    &::after{
+      top: 0;
+    }
+    &::before{
+      bottom: 0;
+    }
+  }
+}
+.burger--active span{
+  opacity: 0;
+
+}
+
