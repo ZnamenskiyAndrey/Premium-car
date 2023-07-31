@@ -79,19 +79,7 @@
   &__top {
   }
 }
-.category {
-  display: inline-block;
-  font-family: "PT Sans";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  color: var(--white);
-  padding: 4px 12px 2px;
-  background-color: var(--category);
-  z-index: 20;
-  border-radius: 3px;
-}
+
 .news {
 
   &__meta {

@@ -92,18 +92,14 @@
 
   }
 }
-.category {
-}
 .hero-article-meta {
-  font-style: italic;
-  color: var(--text-color);
   margin-bottom: 14px;
 
-  &__link-autor {
+  &__author-link {
     transition: color 0.3s ease-in-out;
     color: var(--text-color);
   }
-  &__link-autor:hover{
+  &__author-link:hover{
     @media (min-width:1024px) {
       color: var(--category);
     }
@@ -151,6 +147,14 @@
   }
 
   &__author-link {
+    transition: color 0.3s ease-in-out;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+  &__author-link:hover{
+    @media (min-width:1024px) {
+      color: var(--category);
+    }
   }
 }
 .blog {
