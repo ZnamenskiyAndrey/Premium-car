@@ -1,21 +1,34 @@
 .footer {
+  background-color: var(--dark);
+  color: var(--white);
 
   &__container {
   }
 
   &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 62px 0 50px 0;
   }
 
   &__logo {
+    margin-bottom: 30px;
+    display: block;
   }
 
   &__logo-img {
+    display: block;
   }
 }
 
 .footer-left {
+  flex-basis: 270px;
 
   &__descr {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--grey);
+    margin: 0 0 64px 0;
   }
 
   &__contacts {
@@ -24,9 +37,13 @@
 .footer-contacts {
 
   &__title {
+    font-size: 20px;
+    margin: 0 0 23px 0;
   }
 
   &__list {
+    display: flex;
+    gap: 15px;
   }
 
   &__item {
@@ -36,13 +53,14 @@
   }
 
   &__svg {
+    display: block;
   }
 }
-.list-reset {
-}
 .footer-center {
+  flex-basis: 295px;
 
   &__title {
+    margin: 0 0 30px 0;
   }
 
   &__article-list {
@@ -51,57 +69,77 @@
 .article-list {
 
   &__item {
+    margin-bottom: 25px;
   }
 }
 .footer-article {
+  display: flex;
+  justify-content: space-between;
 
   &__info {
+    max-width: 178px;
+    padding-bottom: 15px;
   }
 
   &__title {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 13px 0;
   }
 
+  &__link {
+    color: var(--white);
+    transition: color 0.3s ease-in-out;
+  }
+  &__link:hover {
+    color: var(--category);
+  }
   &__meta {
+    color: var(--grey);
   }
 
   &__author-link {
+    transition: color 0.3s ease-in-out;
+    color: var(--grey);
+  }
+  &__author-link:hover{
+    @media (min-width:1024px) {
+      color: var(--category);
+    }
+  }
+
+  &__img {
+    border-radius: 3px;
   }
 }
 
-.author {
-
-  &__link {
-  }
-}
 .footer-right {
+  flex-basis: 270px;
 
   &__title {
   }
 }
-.newsletter-form {
 
-  &__label {
-  }
-
-  &__input {
-  }
-
-  &__btn {
-  }
-}
 .footer-form {
 
   &__label {
   }
 
   &__input {
+    background-color: var(--dark-light);
+    border-color: var(--dark-light);
+  }
+
+  &__btn {
+
   }
 }
 
-.btn--footer {
-}
 .footer-bottom {
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 39px 0 37px 0;
   &__nav {
 
   }
@@ -110,11 +148,23 @@
 .footer-nav {
 
   &__list {
+    display: flex;
+    align-items: center;
   }
 
-  &__item {
+  &__item:not(:last-child){
+    margin-right: 35px;
   }
-
-  &__link {
+  &__link{
+    color: var(--white);
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: var(--category);
+    }
   }
 }

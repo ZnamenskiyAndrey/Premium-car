@@ -26,6 +26,13 @@
     }
   }
 }
+
+.logo {
+  &__img {
+    display: block;
+  }
+}
+
 .header-search {
 
   &__button {
@@ -40,6 +47,7 @@
     }
   }
 }
+
 .button {
 }
 .btn-reset {

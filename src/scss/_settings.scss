@@ -148,7 +148,13 @@ a {
   text-align: center;
   font-weight: 700;
   border-radius: 3px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
+.btn:hover {
+  background-color: var(--black);
+  color: var(--category);
+}
+
 
 .side-offset{
   margin-bottom: 60px;
