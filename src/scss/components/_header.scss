@@ -7,14 +7,55 @@
     justify-content: space-between;
   }
   &__list{
-    display: flex;
     margin-left: -84px;
-  }
-  &__item:not(:last-child){
-    margin-right: 35px;
+
+    @include small-tablet {
+      display: none;
+    }
   }
   &__link{
     color: var(--white);
+  }
+}
+.nav {
+
+
+  &__list {
+    display: flex;
+    transition: 0.6s ease-in-out;
+    @include small-tablet {
+      position: absolute;
+      top: 0;
+      width: 80%;
+      height: 100vh;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-150%);
+      transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+      padding: 40px 20px;
+      z-index: 30;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      background: rgb(20,21,28);
+background: linear-gradient(210deg, var(--black) 51%, transparent 51%);
+    }
+  }
+
+  &__item {
+  }
+
+  &__item:not(:last-child){
+    margin-right: 35px;
+
+    @include small-tablet {
+      margin: 0;
+    }
+  }
+
+  &__link {
     font-family: "PT Sans";
     font-size: 14px;
     font-style: normal;
@@ -24,8 +65,16 @@
     &:hover {
       color: var(--category);
     }
+
+    @include small-tablet {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
   }
 }
+
+
 
 .logo {
   &__img {
@@ -34,7 +83,9 @@
 }
 
 .header-search {
-
+  @include small-tablet {
+    display: none;
+  }
   &__button {
 
   }
@@ -48,42 +99,41 @@
   }
 }
 
-.button {
-}
-.btn-reset {
-}
 
 .burger {
+  @include burger;
   width: 40px;
   height: 26px;
-  border: solid 2px solid var(--white);
-  position: relative;
+  color: var(--white);
+  display: none;
+  z-index: 40;
 
-  &__line {
-    width: 36px;
-    background-color: var(--white);
-    height: 3px;
+  @include small-tablet {
     display: block;
-    &::after,
-    &::before {
-      content: "";
-      width: 36px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background-color: var(--white);
-      position: absolute;
-    }
-    &::after{
-      top: 0;
-    }
-    &::before{
-      bottom: 0;
-    }
   }
+
 }
 .burger--active span{
-  opacity: 0;
-
+  width: 0;
 }
+.burger--active span::after{
+  background-color: steelblue;
+  transform: rotate(45deg);
+  top: 50%;
+ }
+.burger--active span::before{
+  background-color: steelblue;
+  transform: rotate(-45deg);
+  top: 50%;
+ }
 
+
+
+.menu--active {
+  @include small-tablet {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+
+  }
+}
